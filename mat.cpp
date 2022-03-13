@@ -83,7 +83,9 @@ namespace ariel{
 
 
 
-
+/*
+Just main for Testing , Ignore!!!!!!
+*/
 // int main(){
 //     cout << ariel::mat(9,7,'@','-') << endl;
 //     cout << mat(13,5,'@','-') << endl;
