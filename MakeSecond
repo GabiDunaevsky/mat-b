@@ -1,0 +1,20 @@
+#!make -f
+
+CXX=clang++-9 
+CXXFLAGS=-std=c++2a -Werror
+
+HEADERS=mat.hpp
+OBJECTS=mat.o
+SOURCES=mat.cpp
+
+run: prog
+	./$^
+
+prog: prog.o $(OBJECTS)
+	$(CXX) $(CXXFLAGS) $^ -o prog
+
+%.o: %.cpp $(HEADERS)
+	$(CXX) $(CXXFLAGS) --compile $< -o $@
+
+clean:
+	rm -f *.o prog
